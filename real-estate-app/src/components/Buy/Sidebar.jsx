@@ -146,8 +146,8 @@ const Sidebar = ({ filters, setFilters }) => {
       </button>
 
       <div className="mt-10 text-center font-bold">
-        <span className="text-xl">E</span>STATE HE<span className="text-2xl">A</span>VEN
-      </div>
+         <span className="font-bold"><span className="text-xl"> NestSync Living</span> </span>
+         </div>
     </div>
   );
 };
