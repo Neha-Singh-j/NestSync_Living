@@ -53,7 +53,8 @@ const PropertySchema = new mongoose.Schema(
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Seller", // Reference the 'Buyer' model
+      // ref: "Seller", // Reference the 'Buyer' model
+      ref:"Buyer",
       required: true,
     },
 

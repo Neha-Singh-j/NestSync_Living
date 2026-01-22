@@ -10,9 +10,17 @@ router.get("/check-auth", (req, res) => {
   }
 
   try {
-    jwt.verify(token, process.env.JWT_SECRET);
-    return res.status(200).json({ authenticated: true });
-  } catch {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    return res.status(200).json({
+      authenticated: true,
+      user: {
+        buyerId: decoded.buyerId,
+        email: decoded.email,
+        fullName: decoded.fullName, // 🔥 REQUIRED
+      },
+    });
+  } catch (error) {
     return res.status(200).json({ authenticated: false });
   }
 });

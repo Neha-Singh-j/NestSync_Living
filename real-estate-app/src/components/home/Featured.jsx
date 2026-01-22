@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const listings = [
   {
     title: "The Glass Pavilion",
@@ -37,9 +39,13 @@ export default function Featured() {
             Handpicked luxury residences currently on the market
           </p>
         </div>
-        <span className="text-blue-600 font-medium cursor-pointer">
-          View all listings →
-        </span>
+        <Link
+  to="/buy"
+  className="text-blue-600 font-medium cursor-pointer"
+>
+  View all listings →
+</Link>
+
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

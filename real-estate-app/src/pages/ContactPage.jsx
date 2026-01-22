@@ -102,46 +102,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="mt-20 border-t bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="font-semibold text-lg">NestSync Living</h3>
-            <p className="text-gray-500 mt-2">
-              Redefining luxury living through seamless technology and
-              personalized service.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-medium">Quick Links</h4>
-            <ul className="text-gray-500 mt-3 space-y-2">
-              <li>Featured Properties</li>
-              <li>Investment Guide</li>
-              <li>Neighborhoods</li>
-              <li>Careers</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-medium">Resources</h4>
-            <ul className="text-gray-500 mt-3 space-y-2">
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-              <li>Cookie Settings</li>
-              <li>Sitemap</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-medium">Follow Us</h4>
-            <p className="text-gray-500 mt-3">Social links here</p>
-          </div>
-        </div>
-        <div className="text-center text-gray-400 text-sm pb-6">
-          © 2026 NestSync Living. All rights reserved.
-        </div>
-      </footer>
+     
     </div>
   );
 }

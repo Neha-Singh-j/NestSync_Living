@@ -1,6 +1,7 @@
 const multer = require("multer");
 const Property = require("../database/models/property");
 
+
 // Multer storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -45,14 +46,21 @@ async function addProperty(req, res) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
+    
+    //  Prevent mongoose crash
+    // if (!mongoose.Types.ObjectId.isValid(id)) {
+    //   return res.status(400).json({ message: "Invalid property ID" });
+    // }
+
     if (!req.files || req.files.length === 0) {
       return res.status(400).json({ message: "At least one image is required" });
     }
 
     const images = req.files.map((file) => file.path);
 
-    // 🔥 OWNER COMES FROM AUTH MIDDLEWARE
-    const owner = req.user.userId;
+    //  OWNER COMES FROM AUTH MIDDLEWARE
+    const owner = req.user.buyerId;
+    // owner: req.user.buyerId,
 console.log("REQ.USER IN CONTROLLER:", req.user);
 
     const newProperty = new Property({
@@ -97,22 +105,37 @@ const getAllProperties = async (req, res) => {
 /* =========================
    GET SINGLE PROPERTY
 ========================= */
+// const getProperty = async (req, res) => {
+//   try {
+//     const property = await Property.findById(req.params.id).populate(
+//       "owner",
+//       "name email"
+//     );
+
+//     if (!property) {
+//       return res.status(404).json({ message: "Property not found" });
+//     }
+
+//     res.json(property);
+//   } catch (error) {
+//     res.status(500).json({ message: "Error fetching property" });
+//   }
+// };
 const getProperty = async (req, res) => {
   try {
-    const property = await Property.findById(req.params.id).populate(
-      "owner",
-      "name email"
-    );
+    const property = await Property.findById(req.params.id);
 
     if (!property) {
       return res.status(404).json({ message: "Property not found" });
     }
 
-    res.json(property);
+    res.status(200).json(property);
   } catch (error) {
+    console.error("Get Property Error:", error);
     res.status(500).json({ message: "Error fetching property" });
   }
 };
+
 
 module.exports = {
   addProperty,

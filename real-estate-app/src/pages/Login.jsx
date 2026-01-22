@@ -19,7 +19,7 @@ const Login = () => {
     try {
         await axios.post("http://localhost:3000/login", { email, password }, { withCredentials: true });
         console.log("User logged in successfully");
-        checkAuth(); // 🔥 Ensure navbar updates
+        checkAuth(); //  Ensure navbar updates
         navigate("/buy");
     } catch (err) {
         setErrorMessage(err.response?.data?.message || "Something went wrong. Please try again.");

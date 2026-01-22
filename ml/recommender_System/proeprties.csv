@@ -1,0 +1,11 @@
+id,title,location,price,bedrooms,bathrooms,amenities
+1,Home,Mathura Uttar Pradesh,100000,2,1,"parking,water supply"
+2,House,Bangalore Pune Hyderabad,1000000,3,3,"parking,garden,power backup"
+3,Jadons Apartment,Mathura Uttar Pradesh,100000,4,4,"lift,parking,security"
+4,NS Home,Ghaziabad,300000,1,1,"water supply"
+5,KS Property,Aligarh Uttar Pradesh,500000,2,2,"parking,security"
+6,SS Properties,Hyderabad Pune,300000,4,4,"lift,parking,gym"
+7,Green Villa,Bangalore,1200000,3,3,"garden,parking,security"
+8,Skyline Apartment,Pune,850000,2,2,"lift,power backup,security"
+9,Royal House,Delhi,950000,3,2,"parking,water supply"
+10,City Homes,Mumbai,1500000,4,4,"lift,gym,swimming pool,security"

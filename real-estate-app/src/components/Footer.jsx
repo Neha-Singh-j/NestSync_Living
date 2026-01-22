@@ -1,3 +1,6 @@
+import nestSyncLogo from "../assets/nestSync.png";
+
+
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
@@ -6,10 +9,18 @@ const Footer = () => {
         
         {/* Brand */}
         <div>
-          <div className="flex items-center gap-2 text-xl font-semibold">
-            <span className="text-blue-600">▮</span>
-            Nestynx Living
-          </div>
+          <div className="flex items-center gap-3">
+              <img
+                src={nestSyncLogo}
+                alt="NestSync Logo"
+                className="w-18 h-10"
+              />
+
+              <span className="text-xl font-bold text-blue-600">
+                NestSync Living
+              </span>
+            </div>
+
           <p className="mt-4 text-gray-500 text-sm leading-relaxed">
             Redefining luxury living through curated experiences and premium
             real estate solutions worldwide.
@@ -17,9 +28,9 @@ const Footer = () => {
 
           {/* Social Icons (simple placeholders) */}
           <div className="flex gap-4 mt-6 text-gray-400">
-            <span className="cursor-pointer hover:text-blue-600">●</span>
-            <span className="cursor-pointer hover:text-blue-600">●</span>
-            <span className="cursor-pointer hover:text-blue-600">●</span>
+            <span className="cursor-pointer hover:text-blue-600"></span>
+            <span className="cursor-pointer hover:text-blue-600"></span>
+            <span className="cursor-pointer hover:text-blue-600"></span>
           </div>
         </div>
 

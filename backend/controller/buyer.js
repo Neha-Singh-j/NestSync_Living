@@ -47,13 +47,22 @@ async function loginBuyer(req, res) {
         }
 
         // Generate JWT token
+        // const token = jwt.sign(
+        //      { buyerId: user._id, email: user.email },
+        //     // { userId: user._id, email: user.email },
+        //     process.env.JWT_SECRET,
+        //     { expiresIn: "7d" }
+        // );
         const token = jwt.sign(
-            // { buyerId: user._id, email: user.email },
-            // { userId: user._id },
-            { userId: user._id, email: user.email },
+            {
+                buyerId: user._id,
+                email: user.email,
+                fullName: user.fullName, //  important
+            },
             process.env.JWT_SECRET,
             { expiresIn: "7d" }
-        );
+            );
+
 
         // Set token in HTTP-only cookie
         res.cookie("token", token, {

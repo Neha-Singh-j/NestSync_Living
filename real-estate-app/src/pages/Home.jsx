@@ -1,5 +1,5 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+// import Navbar from '../components/Navbar'
+// import Footer from '../components/Footer'
 import Hero from '../components/home/Hero'
 import Featured from '../components/home/Featured'
 import WhyChooseUs from '../components/home/WhyChoseUs'
@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="bg-white">
       {/* Navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Hero Section */}
       <Hero />
@@ -25,7 +25,7 @@ function Home() {
       </section>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

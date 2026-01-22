@@ -10,7 +10,7 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div>
             <div className="mx-auto w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl mb-4">
-              ✓
+              
             </div>
             <h3 className="font-semibold">Verified Listings</h3>
             <p className="text-gray-500 text-sm mt-2">
@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
 
           <div>
             <div className="mx-auto w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl mb-4">
-              🎧
+              
             </div>
             <h3 className="font-semibold">Expert Support</h3>
             <p className="text-gray-500 text-sm mt-2">
@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
 
           <div>
             <div className="mx-auto w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl mb-4">
-              📈
+              
             </div>
             <h3 className="font-semibold">Market Insights</h3>
             <p className="text-gray-500 text-sm mt-2">

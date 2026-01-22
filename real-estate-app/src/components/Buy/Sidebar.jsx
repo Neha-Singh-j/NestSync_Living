@@ -12,8 +12,8 @@ const Sidebar = ({ filters, setFilters }) => {
   };
 
   return (
-    <div className="w-60 h-screen bg-white shadow p-4 fixed left-0 top-0 overflow-y-auto">
-      <h2 className="text-lg font-semibold mb-4">Filters</h2>
+    <div className="w-60 bg-white shadow p-4 rounded-lg">
+  <h2 className="text-lg font-semibold mb-4">Filters</h2>
 
       {/* Price Range */}
       <div className="mb-3">
