@@ -21,10 +21,10 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const [listingRes, wishlistRes] = await Promise.all([
-          axios.get("http://nestsync-living.onrender.com/property/my-listings", {
+          axios.get("https://nestsync-living.onrender.com/property/my-listings", {
             withCredentials: true,
           }),
-          axios.get("http://nestsync-living.onrender.com/wishlist", {
+          axios.get("https://nestsync-living.onrender.com/wishlist", {
             withCredentials: true,
           }),
         ]);
@@ -143,7 +143,7 @@ const StatCard = ({ title, value }) => (
 const PropertyCard = ({ property }) => {
   const imageUrl =
     property.images?.length > 0
-      ? `http://nestsync-living.onrender.com/${property.images[0]}`
+      ? `https://nestsync-living.onrender.com/${property.images[0]}`
       : "https://via.placeholder.com/400";
 
   return (

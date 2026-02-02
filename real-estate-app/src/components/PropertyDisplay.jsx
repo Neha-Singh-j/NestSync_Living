@@ -9,7 +9,7 @@ import {
 import { BsFullscreen } from "react-icons/bs";
 import axios from "axios";
 
-const BASE_URL = "http://nestsync-living.onrender.com";
+const BASE_URL = "https://nestsync-living.onrender.com";
 
 const PropertyDisplay = () => {
   const { id } = useParams();

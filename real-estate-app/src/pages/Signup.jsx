@@ -17,7 +17,7 @@ const Signup = () => {
   async function handleBuyserSubmit(e){
     e.preventDefault();
     try {
-        const response = await axios.post("http://nestsync-living.onrender.com/signup", { fullName, email, password }, { withCredentials: true });
+        const response = await axios.post("https://nestsync-living.onrender.com/signup", { fullName, email, password }, { withCredentials: true });
         console.log(`User created successfully ${response}`);
         navigate("/login");
 

@@ -20,7 +20,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://nestsync-living.onrender.com/logout",
+        "https://nestsync-living.onrender.com/logout",
         {},
         { withCredentials: true }
       );

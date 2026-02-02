@@ -25,7 +25,7 @@ const Sell = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get("http://nestsync-living.onrender.com/check-auth", {
+        const response = await axios.get("https://nestsync-living.onrender.com/check-auth", {
           withCredentials: true, // Ensure cookies are sent
         });
 
@@ -93,7 +93,7 @@ const Sell = () => {
     });
 
     try {
-      await axios.post("http://nestsync-living.onrender.com/property/sell", formDataToSend, {
+      await axios.post("https://nestsync-living.onrender.com/property/sell", formDataToSend, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       });

@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const res = await axios.get("http://nestsync-living.onrender.com/check-auth", {
+      const res = await axios.get("https://nestsync-living.onrender.com/check-auth", {
         withCredentials: true,
       });
 

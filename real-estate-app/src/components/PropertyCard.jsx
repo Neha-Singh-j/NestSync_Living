@@ -16,7 +16,7 @@ const PropertyCard = ({
 
   const imageUrl =
     property.images?.length > 0
-      ? `http://nestsync-living.onrender.com/${property.images[0]}`
+      ? `https://nestsync-living.onrender.com/${property.images[0]}`
       : "https://via.placeholder.com/400";
 
   const handleWishlist = async (e) => {
@@ -26,14 +26,14 @@ const PropertyCard = ({
     try {
       if (isWishlisted) {
         await axios.delete(
-          `http://nestsync-living.onrender.com/wishlist/${property._id}`,
+          `https://nestsync-living.onrender.com/wishlist/${property._id}`,
           { withCredentials: true }
         );
         setIsWishlisted(false);
         onWishlistToggle?.(property._id, false);
       } else {
         await axios.post(
-          `http://nestsync-living.onrender.com/wishlist/${property._id}`,
+          `https://nestsync-living.onrender.com/wishlist/${property._id}`,
           {},
           { withCredentials: true }
         );

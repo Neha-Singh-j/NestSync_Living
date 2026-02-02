@@ -24,7 +24,7 @@ const Buy = () => {
   /* FETCH PROPERTIES */
   useEffect(() => {
     axios
-      .get("http://nestsync-living.onrender.com/property/all", {
+      .get("https://nestsync-living.onrender.com/property/all", {
         withCredentials: true,
       })
       .then((res) => setProperties(res.data || []))
@@ -35,7 +35,7 @@ const Buy = () => {
   /* FETCH WISHLIST */
   useEffect(() => {
     axios
-      .get("http://nestsync-living.onrender.com/wishlist", {
+      .get("https://nestsync-living.onrender.com/wishlist", {
         withCredentials: true,
       })
       .then((res) => {

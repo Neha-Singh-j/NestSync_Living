@@ -12,13 +12,13 @@ const CheckFraud = () => {
       try {
         // fetch property details first
         const propertyRes = await axios.get(
-          `http://nestsync-living.onrender.com/property/${id}`
+          `https://nestsync-living.onrender.com/property/${id}`
         );
 
         const p = propertyRes.data;
 
         const fraudRes = await axios.post(
-          "http://nestsync-living.onrender.com/api/ml/detect-fraud",
+          "https://nestsync-living.onrender.com/api/ml/detect-fraud",
           {
             price: p.price,
             area: p.area,
