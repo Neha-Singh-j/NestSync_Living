@@ -17,7 +17,7 @@ const Login = () => {
   async function handleBuyserSubmit(e) {
     e.preventDefault();
     try {
-        await axios.post("http://localhost:3000/login", { email, password }, { withCredentials: true });
+        await axios.post("http://nestsync-living.onrender.com/login", { email, password }, { withCredentials: true });
         console.log("User logged in successfully");
         checkAuth(); //  Ensure navbar updates
         navigate("/buy");

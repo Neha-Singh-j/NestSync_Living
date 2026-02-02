@@ -21,7 +21,7 @@ const PricePrediction = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:3000/api/ml/predict-price",
+        "http://nestsync-living.onrender.com/api/ml/predict-price",
         {
           lot_area: Number(form.lot_area),
           bedrooms: Number(form.bedrooms),
