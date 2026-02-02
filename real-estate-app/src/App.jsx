@@ -10,7 +10,7 @@ import PricePrediction from "./pages/PricePrediction";
 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Buy from "./pages/Buy";
 import Sell from "./pages/Sell";
 import ContactPage from "./pages/ContactPage";
