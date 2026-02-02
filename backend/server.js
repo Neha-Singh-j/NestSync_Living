@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const path = require("path");
 
 const mlRoutes = require("./routes/ml.routes.js");
 const DBconnect = require("./database/DBconnect");
@@ -12,27 +11,29 @@ const propertyRoute = require("./routes/property");
 
 const app = express();
 
+//  CORS (ONLY ONCE)
+app.use(cors({
+  origin: [
+    "https://nest-sync-living.vercel.app",
+    "http://localhost:5173"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 DBconnect();
 
-   // MIDDLEWARES (ORDER MATTERS!)
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
-
+// MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-
+// ROUTES
 app.use("/api/ml", mlRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Backend running successfully ");
+  res.send("Backend running successfully");
 });
 
 app.use(authRoute);
